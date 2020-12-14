@@ -1,10 +1,13 @@
 version: '3'
 services:
   unturned:
-      build: .
-      container_name: unturned
-      restart: always
-      ports:
-        - "27015:27015"
-        - "27016:27016"
-        - "27017:27017"
+    build: .
+    container_name: unturned
+    restart: always
+    #network_mode: "host"
+    ports:
+      - 27015:27015
+      - 27016:27016
+      - 27017:27017
+    volumes:
+      - ./data/:/home/steam/unturned/Servers

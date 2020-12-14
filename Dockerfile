@@ -13,9 +13,8 @@ RUN ./steamcmd.sh \
     +quit 
 
 WORKDIR /home/steam/unturned
+EXPOSE 27015 27016 27017
 
-EXPOSE 27015/tcp 27015/udp
-EXPOSE 27016/tcp 27016/udp
-EXPOSE 27017/tcp 27017/udp
+VOLUME [ "/home/steam/unturned/Servers" ]
 
 CMD [ "./ExampleServer.sh" ]
