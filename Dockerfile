@@ -18,4 +18,4 @@ EXPOSE 27015/tcp 27015/udp
 EXPOSE 27016/tcp 27016/udp
 EXPOSE 27017/tcp 27017/udp
 
-CMD [ "./Unturned_Headless.x86_64" ]
+CMD [ "./ExampleServer.sh" ]
